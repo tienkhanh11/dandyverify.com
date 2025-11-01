@@ -8,12 +8,12 @@
         html, body {
             margin: 0;
             padding: 0;
-            height: 100%;
+            height: 150vh; /* más alto que la ventana para permitir scroll */
             background-color: #000; /* fondo negro por defecto */
-            background-image: url("static/dandyfondo.PNG"); /* imagen de fondo */
+            background-image: url("static/dandyfondo.PNG");
             background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
+            background-position: center top; /* empieza desde arriba */
+            background-size: 80% auto; /* más pequeña que la ventana, mantiene proporción */
         }
     </style>
 </head>
