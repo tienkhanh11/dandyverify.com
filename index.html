@@ -8,17 +8,27 @@
         html, body {
             margin: 0;
             padding: 0;
-            height: 110vh; /* más alto que la ventana para permitir scroll */
-            background-color: #000; /* fondo negro por defecto */
+            height: 100vh; /* permite scroll */
+            background-color: #000; /* fondo negro */
             background-image: url("static/dandyfondo.PNG");
             background-repeat: no-repeat;
             background-position: center top; /* empieza desde arriba */
-            background-size: 87% auto; /* más pequeña que la ventana, mantiene proporción */
+            background-size: 87% auto; /* más pequeña que la ventana */
+            position: relative;
+        }
+
+        /* GIF en la esquina inferior derecha */
+        .corner-gif {
+            position: fixed; /* siempre visible en la esquina */
+            bottom: 20px;
+            right: 20px;
+            width: 120px; /* puedes ajustar tamaño */
+            height: auto;
+            z-index: 10; /* por encima de todo */
         }
     </style>
 </head>
 <body>
+    <img src="https://verifydandy.com/images/DandyHats.gif" alt="Dandy Hats GIF" class="corner-gif">
 </body>
 </html>
-
-
