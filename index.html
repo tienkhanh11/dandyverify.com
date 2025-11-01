@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación Dandy Hats</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1b1b1b, #2c2c2c);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #252525;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.6);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #ffcc00;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #ffcc00;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            background: #e6b800;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            min-height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Verificación Dandy Hats</h1>
+        <input type="text" id="code" placeholder="Ingresa tu código">
+        <br>
+        <button onclick="verifyCode()">Verificar</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        const validCodes = ["DANDY123", "HAT456", "VIP789"]; // códigos de ejemplo
+
+        function verifyCode() {
+            const input = document.getElementById('code').value.trim();
+            const result = document.getElementById('result');
+
+            if (validCodes.includes(input.toUpperCase())) {
+                result.style.color = "#00ff00";
+                result.textContent = "✅ Código válido. ¡Acceso concedido!";
+            } else {
+                result.style.color = "#ff4444";
+                result.textContent = "❌ Código inválido. Intenta de nuevo.";
+            }
+        }
+    </script>
+</body>
+</html>
