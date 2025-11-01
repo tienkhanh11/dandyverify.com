@@ -8,16 +8,19 @@
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background: url("static/dandyfondo.jpg") no-repeat center center fixed;
+            background-color: #000; /* fondo negro por defecto */
+            background-image: url("static/dandyfondo.PNG"); /* cambiamos la extensión */
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
             background-size: cover;
             color: #fff;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             text-align: center;
-            backdrop-filter: brightness(0.6);
         }
 
         .container {
