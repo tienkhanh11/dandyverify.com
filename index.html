@@ -8,23 +8,23 @@
         html, body {
             margin: 0;
             padding: 0;
-            height: 100vh; /* permite scroll */
+            height: 100vh; 
             background-color: #000; /* fondo negro */
             background-image: url("static/dandyfondo.PNG");
             background-repeat: no-repeat;
-            background-position: center top; /* empieza desde arriba */
-            background-size: 87% auto; /* más pequeña que la ventana */
+            background-position: center top; 
+            background-size: 87% auto; 
             position: relative;
         }
 
-        /* GIF en la esquina inferior derecha */
+        /* GIF en la esquina superior derecha, más pequeño */
         .corner-gif {
-            position: fixed; /* siempre visible en la esquina */
-            bottom: 20px;
-            right: 20px;
-            width: 120px; /* puedes ajustar tamaño */
+            position: fixed; /* siempre visible */
+            top: 20px;      /* desde arriba */
+            right: 20px;    /* desde la derecha */
+            width: 60px;    /* más pequeño */
             height: auto;
-            z-index: 10; /* por encima de todo */
+            z-index: 10; 
         }
     </style>
 </head>
