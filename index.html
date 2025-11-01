@@ -3,90 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificación Dandy Hats</title>
+    <title>Dandy Hats Verification</title>
     <style>
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #1b1b1b, #2c2c2c);
+            background: url("static/dandyfondo.jpg") no-repeat center center fixed;
+            background-size: cover;
             color: #fff;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            text-align: center;
+            backdrop-filter: brightness(0.6);
         }
 
         .container {
-            background: #252525;
+            background: rgba(0, 0, 0, 0.6);
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.6);
-            text-align: center;
-            width: 90%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
             max-width: 400px;
+            width: 90%;
         }
 
         h1 {
-            margin-bottom: 20px;
-            font-size: 24px;
+            font-size: 26px;
+            margin-bottom: 10px;
             color: #ffcc00;
         }
 
-        input {
-            width: 80%;
-            padding: 10px;
-            border-radius: 8px;
-            border: none;
-            margin-bottom: 20px;
-            font-size: 16px;
-        }
-
-        button {
-            padding: 10px 25px;
-            border: none;
-            border-radius: 8px;
-            background: #ffcc00;
-            color: #000;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        button:hover {
-            background: #e6b800;
-        }
-
-        #result {
-            margin-top: 20px;
+        p {
             font-size: 18px;
-            min-height: 24px;
+            margin: 5px 0;
+        }
+
+        .small {
+            font-size: 15px;
+            color: #aaa;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 22px; }
+            p { font-size: 16px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Verificación Dandy Hats</h1>
-        <input type="text" id="code" placeholder="Ingresa tu código">
-        <br>
-        <button onclick="verifyCode()">Verificar</button>
-        <div id="result"></div>
+        <h1>✅ Gorra Verificada</h1>
+        <p><strong>Gorra:</strong> Dandy X Tombochio</p>
+        <p><strong>Scan counts:</strong> 1</p>
+        <p class="small">Propiedad original verificada por Dandy Hats</p>
     </div>
-
-    <script>
-        const validCodes = ["DANDY123", "HAT456", "VIP789"]; // códigos de ejemplo
-
-        function verifyCode() {
-            const input = document.getElementById('code').value.trim();
-            const result = document.getElementById('result');
-
-            if (validCodes.includes(input.toUpperCase())) {
-                result.style.color = "#00ff00";
-                result.textContent = "✅ Código válido. ¡Acceso concedido!";
-            } else {
-                result.style.color = "#ff4444";
-                result.textContent = "❌ Código inválido. Intenta de nuevo.";
-            }
-        }
-    </script>
 </body>
 </html>
